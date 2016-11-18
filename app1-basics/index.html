@@ -1,6 +1,25 @@
-<html>
-	<body>
-	
+
+<!DOCTYPE html>
+<html ng-app="appOne">
+	<head>
+		<meta charset="utf-8">
+		<title>document</title>
+	</head>
+	<body ng-controller='mainCtrl'>
+
+
+		<input type="text" ng-model="message.first_name">
+		<input type="text" ng-model="message.last_name">
+
+		{{message.first_name}} {{message.last_name}}
+
+
+
+  <!-- ng model makes an object for you.  -->
+		<br/>
+
+		<input type="submit" ng-click="alert(message)")>
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
