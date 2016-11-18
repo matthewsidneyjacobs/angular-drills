@@ -1,9 +1,30 @@
+<!DOCTYPE html>
 <html ng-app="arrayApp">
 	<head>
 		<link rel="stylesheet" href="style.css"></link>
 	</head>
 	<body ng-controller="arrayController">
-	
+
+
+		<input type="text" placeholder="name" ng-model="newData.name">
+		<input type="text" placeholder="email" ng-model="newData.email">
+		<input type="text" placeholder="dateEmployed" ng-model="newData.dateEmployed">
+		<input type="text" placeholder="phone" ng-model="newData.phone">
+		<input type='submit' ng-click="submitData()">
+
+
+		<ul>
+			<li ng-repeat="d in data">
+				<p>
+					{{d.name}}<br/>
+					{{d.email}}<br/>
+					{{d.dateEmployed}}<br/>
+					{{d.phone}}<br/>
+				</p>
+			</li>
+		</ul>
+
+
 		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.min.js"></script>
 		<script src="app.js"></script>
 		<script src="controller.js"></script>
